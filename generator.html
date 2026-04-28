@@ -35,41 +35,51 @@
 
     <script>
       function generate() {
-        let nama = document.getElementById("nama").value;
+        let nama = document.getElementById("nama").value.trim();
 
         if (!nama) {
           alert("Isi nama dulu bro 😄");
           return;
         }
 
+        // Encode nama biar aman (spasi & simbol)
         let encoded = encodeURIComponent(nama);
 
         let link = "https://haidar-05.github.io/undangan-revita-jamil/?to=" + encoded;
 
-        let pesan = `Assalamu'alaikum 🙏
+        // Format pesan lengkap (SESUAI REQUEST LU 🔥)
+        let pesan = `Yth. ${nama}
 
-Kami mengundang Anda untuk menghadiri acara pernikahan kami.
+Assalamualaikum Wr. Wb
 
-Berikut link undangan:
+Dengan memohon Rahmat dan Ridho Allah SWT, tanpa mengurangi rasa hormat kami mengundang Bapak/Ibu/Saudara/i untuk berkenan hadir di acara pernikahan kami.
+
+Detail Acara:
 ${link}
 
-Terima kasih 🙏`;
+Merupakan suatu kehormatan dan kebahagiaan jika Anda bersedia hadir dan turut memberikan doa restu untuk kami.
+
+Terima kasih kami sampaikan.
+
+Wassalamualaikum Wr. Wb
+
+Revita & Jamil`;
 
         let wa = "https://wa.me/?text=" + encodeURIComponent(pesan);
 
         document.getElementById("result").innerHTML = `
-    <p><b>Link:</b></p>
-    <input value="${link}" id="copyText" class="form-control text-center" readonly>
+          <p><b>Link:</b></p>
+          <input value="${link}" id="copyText" class="form-control text-center" readonly>
 
-    <button onclick="copyLink()" class="btn btn-warning mt-2">Copy Link</button>
+          <button onclick="copyLink()" class="btn btn-warning mt-2">Copy Link</button>
 
-    <br><br>
+          <br><br>
 
-    <a href="${link}" target="_blank" class="btn btn-success">Buka Undangan</a>
-    <br><br>
+          <a href="${link}" target="_blank" class="btn btn-success">Buka Undangan</a>
+          <br><br>
 
-    <a href="${wa}" target="_blank" class="btn btn-success">Kirim WhatsApp</a>
-  `;
+          <a href="${wa}" target="_blank" class="btn btn-success">Kirim WhatsApp</a>
+        `;
       }
 
       function copyLink() {
