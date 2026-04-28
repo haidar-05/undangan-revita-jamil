@@ -325,16 +325,6 @@
       </div>
     </section>
 
-    <div class="container text-center mt-5">
-      <h3>Generator Undangan</h3>
-
-      <input type="text" id="inputNama" placeholder="Masukkan nama tamu" class="form-control mt-3" />
-
-      <button onclick="generateLink()" class="btn btn-primary mt-3">Generate Link</button>
-
-      <div id="hasilLink" class="mt-4"></div>
-    </div>
-
     <!-- Lagu -->
     <audio id="bgMusic" loop>
       <source src="musik/lagu.mp3" type="audio/mpeg" />
@@ -452,41 +442,6 @@
       if (nama) {
         nama = nama.replace(/\b\w/g, (l) => l.toUpperCase());
         document.getElementById("namaTamu").innerText = nama;
-      }
-    </script>
-    <script>
-      function generateLink() {
-        let nama = document.getElementById("inputNama").value;
-
-        if (!nama) {
-          alert("Isi nama dulu bro 😄");
-          return;
-        }
-
-        // format nama jadi URL
-        let namaURL = encodeURIComponent(nama);
-
-        // link undangan lu
-        let link = "https://haidar-05.github.io/undangan-revita-jamil/?to=" + namaURL;
-
-        // pesan WA
-        let pesan = `Assalamu'alaikum 🙏\n\nKami mengundang Anda untuk menghadiri acara pernikahan kami.\n\nBerikut link undangan:\n${link}\n\nTerima kasih 🙏`;
-
-        let waLink = "https://wa.me/?text=" + encodeURIComponent(pesan);
-
-        // tampilkan hasil
-        document.getElementById("hasilLink").innerHTML = `
-    <p><b>Link:</b></p>
-    <a href="${link}" target="_blank">${link}</a><br><br>
-
-    <a href="${link}" target="_blank" class="btn btn-success mt-2">
-      Buka Undangan
-    </a><br><br>
-
-    <a href="${waLink}" target="_blank" class="btn btn-success">
-      Kirim ke WhatsApp
-    </a>
-  `;
       }
     </script>
   </body>
