@@ -46,6 +46,7 @@
     <section id="hero" class="hero d-flex justify-content-center align-items-center text-center text-white">
       <main>
         <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
+        <h3 id="namaTamu">Tamu Undangan</h3>
         <h1 class="nama">Revita & Jamil</h1>
         <p>Akan melangsungkan resepsi pernikahan dalam:</p>
 
@@ -433,6 +434,15 @@
           btn.innerHTML = "🔇";
         }
       });
+    </script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      let nama = urlParams.get("to");
+
+      if (nama) {
+        nama = nama.replace(/\b\w/g, (l) => l.toUpperCase());
+        document.getElementById("namaTamu").innerText = nama;
+      }
     </script>
   </body>
 </html>
