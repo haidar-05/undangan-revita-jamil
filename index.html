@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Revita & Jamil Wedding</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <!-- Countdown -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplycountdown.js@1.5.0/dist/simplyCountdown.theme.default.css" />
+    <script src="https://cdn.jsdelivr.net/npm/simplycountdown.js@1.5.0/dist/simplyCountdown.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="overflow-hidden">
+    <!-- NAVBAR (hidden dulu) -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top d-none">
+      <div class="container">
+        <a class="navbar-brand" href="#">Revita & Jamil</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#undangan">Info</a></li>
+            <li class="nav-item"><a class="nav-link" href="#story">Story</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gift">Gifts</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero d-flex justify-content-center align-items-center text-center text-white">
+      <main>
+        <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
+        <h1 class="nama">Revita & Jamil</h1>
+        <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+
+        <div class="simply-countdown"></div>
+
+        <a href="#undangan" onclick="unlockScroll()" class="btn btn-gold mt-4"> Lihat Undangan </a>
+      </main>
+    </section>
+
+    <!-- UNDANGAN -->
+    <section id="undangan" class="undangan">
+      <!-- Ornamen Dekoratif -->
+      <div class="ornamen-top"></div>
+
+      <div class="container text-center">
+        <h2>Acara Pernikahan</h2>
+        <p class="lead">Diselenggarakan pada 05 Juni 2026 di Tangerang, Banten.</p>
+
+        <p class="desc">Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.</p>
+
+        <div class="row pasangan align-items-center justify-content-center">
+          <!-- KIRI -->
+          <div class="col-md-4 text-end">
+            <h3>Revita</h3>
+            <p>Revita Septiani, S.Pd</p>
+            <span>Putri Pertama dari Bpk. Maryasan & Ibu Komariah</span>
+          </div>
+
+          <!-- TENGAH -->
+          <div class="col-md-4 d-flex justify-content-center align-items-center gap-3">
+            <img src="img/wanita.jpg" class="foto wanita" alt="Revita" />
+            <span class="love">❤</span>
+            <img src="img/pria.jpg" class="foto pria" alt="Jamil" />
+          </div>
+
+          <!-- KANAN -->
+          <div class="col-md-4 text-start">
+            <h3>Jamil</h3>
+            <p>Jamil Fahmi</p>
+            <span>Putra Terakhir dari Bapak H.Rasam (Alm) & Ibu Rohimah</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ornamen Bawah -->
+      <div class="ornamen-bottom"></div>
+    </section>
+
+    <section id="info" class="info text-center text-white">
+      <!-- Pattern Background -->
+      <div class="pattern-overlay"></div>
+
+      <div class="container">
+        <h2>Informasi Acara</h2>
+
+        <p class="alamat">
+          Alamat: Gang H.Mansur <br />
+          Jl. Kp. Pintu Kapuk RT30 RW 14, Desa Bojong Renged, Kecamatan Teluknaga, Kab Tangerang, Banten
+        </p>
+
+        <p class="note mt-3">Diharapkan untuk tidak salah alamat dan tanggal.</p>
+
+        <!-- MAP -->
+        <div class="map-container mt-4">
+          <iframe src="https://maps.google.com/maps?q=VMX2+6P2%20Bojong%20Renged%20Teluknaga%20Tangerang&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"> </iframe>
+        </div>
+
+        <a href="https://www.google.com/maps?q=VMX2+6P2%20Bojong%20Renged%20Teluknaga%20Tangerang" target="_blank" class="btn btn-light btn-sm mt-3"> 📍 Buka di Google Maps </a>
+
+        <div class="row mt-4 justify-content-center">
+          <!-- AKAD -->
+          <div class="col-md-5 mb-3">
+            <div class="card-acara">
+              <div class="icon-ring">💍</div>
+              <h4>AKAD NIKAH</h4>
+              <p class="mb-1">08.00 - 10.00</p>
+              <p class="mb-2">Jum'at, 05 Juni 2026</p>
+              <small>Saat acara akad diharapkan khidmat</small>
+            </div>
+          </div>
+
+          <!-- RESEPSI -->
+          <div class="col-md-5 mb-3">
+            <div class="card-acara">
+              <div class="icon-ring">🎉</div>
+              <h4>RESEPSI</h4>
+              <p class="mb-1">10.00 - selesai</p>
+              <p class="mb-2">Jum'at, 05 Juni 2026</p>
+              <small>Acara santai & penuh kebahagiaan</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story">
+      <!-- Dekorasi Bunga -->
+      <div class="flower-decor flower-left"></div>
+      <div class="flower-decor flower-right"></div>
+
+      <div class="container text-center">
+        <h2>Our Story</h2>
+        <p class="subtitle">Perjalanan kisah kami</p>
+
+        <div class="timeline">
+          <!-- ITEM 1 -->
+          <div class="timeline-item left">
+            <div class="content">
+              <h4>Pertama Bertemu</h4>
+              <span>2022</span>
+              <p>Kami pertama kali bertemu secara tidak sengaja, dan sejak saat itu cerita kami dimulai.</p>
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="timeline-item right">
+            <div class="content">
+              <h4>Mulai Dekat</h4>
+              <span>2023</span>
+              <p>Hari demi hari kami semakin dekat, saling mengenal lebih dalam.</p>
+            </div>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="timeline-item left">
+            <div class="content">
+              <h4>Lamaran</h4>
+              <span>2025</span>
+              <p>Momen spesial dimana kami memutuskan untuk melangkah ke jenjang yang lebih serius.</p>
+            </div>
+          </div>
+
+          <!-- ITEM 4 -->
+          <div class="timeline-item right">
+            <div class="content">
+              <h4>Menikah</h4>
+              <span>2026</span>
+              <p>Dan akhirnya kami akan mengikat janji suci dalam pernikahan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <!-- Ornamen Gallery -->
+      <div class="gallery-ornament"></div>
+
+      <div class="container text-center">
+        <p class="sub">Memori Kisah Kami</p>
+        <h2>Galeri Foto</h2>
+        <p class="desc">Beberapa momen terbaik yang kami abadikan</p>
+
+        <div class="row mt-4">
+          <div class="col-md-3 col-6 mb-3">
+            <img src="img/gallery1.jpg" class="img-fluid galeri-img" alt="Gallery 1" />
+          </div>
+
+          <div class="col-md-3 col-6 mb-3">
+            <img src="img/gallery2.jpg" class="img-fluid galeri-img" alt="Gallery 2" />
+          </div>
+
+          <div class="col-md-3 col-6 mb-3">
+            <img src="img/gallery3.jpg" class="img-fluid galeri-img" alt="Gallery 3" />
+          </div>
+
+          <div class="col-md-3 col-6 mb-3">
+            <img src="img/gallery4.jpg" class="img-fluid galeri-img" alt="Gallery 4" />
+          </div>
+
+          <div class="col-md-3 col-6 mb-3">
+            <img src="img/gallery5.jpg" class="img-fluid galeri-img" alt="Gallery 5" />
+          </div>
+
+          <div class="col-md-3 col-6 mb-3">
+            <img src="img/gallery6.jpg" class="img-fluid galeri-img" alt="Gallery 6" />
+          </div>
+
+          <div class="col-md-3 col-6 mb-3">
+            <img src="img/gallery7.jpg" class="img-fluid galeri-img" alt="Gallery 7" />
+          </div>
+
+          <div class="col-md-3 col-6 mb-3">
+            <img src="img/gallery8.jpg" class="img-fluid galeri-img" alt="Gallery 8" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="rsvp">
+      <!-- Dekorasi RSVP -->
+      <div class="rsvp-decor"></div>
+
+      <div class="container text-center">
+        <h2>RSVP</h2>
+        <p class="desc">Mohon konfirmasi kehadiran dan berikan doa terbaik</p>
+
+        <!-- FORM -->
+        <form id="rsvpForm" class="mt-4">
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-3">
+              <input type="text" id="nama" class="form-control" placeholder="Nama" required />
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <select id="status" class="form-control" required>
+                <option value="">Konfirmasi Kehadiran</option>
+                <option>Hadir</option>
+                <option>Tidak Hadir</option>
+              </select>
+            </div>
+
+            <div class="col-md-12 mb-3">
+              <textarea id="ucapan" class="form-control" rows="3" placeholder="Tulis ucapan & doa..."></textarea>
+            </div>
+
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-gold">Kirim</button>
+            </div>
+          </div>
+        </form>
+
+        <!-- HASIL UCAPAN -->
+        <div id="listUcapan" class="mt-4 text-start"></div>
+      </div>
+    </section>
+
+    <section id="gift" class="gift text-center">
+      <!-- Pattern Gift -->
+      <div class="gift-pattern"></div>
+
+      <div class="container">
+        <h2>Wedding Gift</h2>
+        <p class="desc">Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Jika ingin memberikan hadiah, silakan klik tombol di bawah ini.</p>
+
+        <!-- TOMBOL -->
+        <button onclick="toggleGift()" class="btn btn-gift mt-3">🎁 Kirim Hadiah</button>
+
+        <!-- ISI GIFT (HIDDEN DULU) -->
+        <div id="giftContent" class="mt-4 d-none">
+          <div class="row justify-content-center">
+            <div class="col-md-4 mb-3">
+              <div class="card-gift">
+                <h4>BCA</h4>
+                <p id="rek1" class="mb-1">1234567890</p>
+                <span>a.n Revita</span>
+                <button onclick="copyRek('rek1')" class="btn btn-gold btn-sm mt-2">Copy</button>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <div class="card-gift">
+                <h4>Mandiri</h4>
+                <p id="rek2" class="mb-1">0987654321</p>
+                <span>a.n Jamil</span>
+                <button onclick="copyRek('rek2')" class="btn btn-gold btn-sm mt-2">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container text-center">
+        <p class="footer-text">Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan do'a restu kepada kedua mempelai.</p>
+
+        <p class="footer-small">The Wedding of</p>
+
+        <h2 class="footer-nama">Revita & Jamil</h2>
+
+        <p class="copyright">
+          © 2026 Made With Love by <br />
+          <span>M.HaidarSaputra, S.Kom</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Lagu -->
+    <audio id="bgMusic" loop>
+      <source src="musik/lagu.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button id="musicBtn" class="music-btn">🔊</button>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Auto Scroll to Top on Load/Refresh -->
+    <script>
+      // Prevent pscroll restoration
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+
+      // Force scroll to top on page load
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          window.scrollTo(0, 0);
+        }, 0);
+      });
+
+      // Remove hash from URL if exists
+      if (window.location.hash) {
+        window.history.replaceState(null, null, window.location.pathname);
+      }
+    </script>
+
+    <!-- Countdown -->
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2026,
+        month: 6,
+        day: 5,
+        hours: 8,
+        minutes: 0,
+        seconds: 0,
+        words: {
+          days: "Hari",
+          hours: "Jam",
+          minutes: "Menit",
+          seconds: "Detik",
+        },
+        plural: false,
+      });
+
+      // UNLOCK SCROLL & SHOW NAVBAR
+      function unlockScroll() {
+        document.body.classList.remove("overflow-hidden");
+
+        const nav = document.getElementById("navbar");
+        nav.classList.remove("d-none");
+
+        // 🔥 TAMBAH INI
+        music.play();
+      }
+
+      // TOGGLE GIFT
+      function toggleGift() {
+        const el = document.getElementById("giftContent");
+        el.classList.toggle("d-none");
+
+        if (!el.classList.contains("d-none")) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      // COPY REKENING
+      function copyRek(id) {
+        const text = document.getElementById(id).innerText;
+        navigator.clipboard.writeText(text);
+        alert("Nomor rekening berhasil disalin!");
+      }
+
+      // RSVP FORM
+      document.getElementById("rsvpForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const nama = document.getElementById("nama").value;
+        const status = document.getElementById("status").value;
+        const ucapan = document.getElementById("ucapan").value;
+
+        const list = document.getElementById("listUcapan");
+        const item = document.createElement("div");
+        item.className = "ucapan-item";
+        item.innerHTML = `
+          <strong>${nama}</strong> <span class="badge bg-secondary">${status}</span>
+          <p class="mb-0 mt-1">${ucapan || "Tidak ada ucapan"}</p>
+        `;
+        list.prepend(item);
+
+        // Reset form
+        this.reset();
+      });
+      const music = document.getElementById("bgMusic");
+      const btn = document.getElementById("musicBtn");
+
+      music.volume = 0.3;
+
+      // tombol play/pause
+      btn.addEventListener("click", function () {
+        if (music.paused) {
+          music.play();
+          btn.innerHTML = "🔊";
+        } else {
+          music.pause();
+          btn.innerHTML = "🔇";
+        }
+      });
+    </script>
+  </body>
+</html>
