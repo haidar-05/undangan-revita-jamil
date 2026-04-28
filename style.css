@@ -1082,3 +1082,8 @@ body.overflow-hidden {
     font-size: 2rem;
   }
 }
+
+#hasilLink a {
+  display: inline-block;
+  margin-top: 10px;
+}
