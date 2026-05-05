@@ -1146,3 +1146,111 @@ body.overflow-hidden {
   width: 100%;
   height: 120px;
 }
+/* ================= GLOBAL MOBILE FIX ================= */
+@media (max-width: 768px) {
+  /* HERO */
+  .hero {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  .hero h1.nama {
+    font-size: 32px;
+  }
+
+  .hero h3 {
+    font-size: 18px;
+  }
+
+  .hero h4 {
+    font-size: 14px;
+  }
+
+  /* NAVBAR */
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  /* UNDANGAN (PASANGAN) */
+  .pasangan {
+    text-align: center;
+  }
+
+  .pasangan .col-md-4 {
+    text-align: center !important;
+    margin-bottom: 20px;
+  }
+
+  .foto {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* INFO */
+  .info {
+    padding: 50px 15px;
+  }
+
+  .info h2 {
+    font-size: 24px;
+  }
+
+  /* MAP */
+  .map-container iframe {
+    height: 220px;
+  }
+
+  /* CARD ACARA */
+  .card-acara {
+    padding: 20px;
+  }
+
+  .card-acara h4 {
+    font-size: 16px;
+  }
+
+  .card-acara p {
+    font-size: 14px;
+  }
+
+  /* QUOTES */
+  .quotes {
+    padding: 60px 15px 100px;
+  }
+
+  .quote-text {
+    font-size: 15px;
+  }
+
+  /* GALLERY */
+  .gallery h2 {
+    font-size: 24px;
+  }
+
+  .galeri-img {
+    border-radius: 10px;
+  }
+
+  /* RSVP */
+  .rsvp {
+    padding: 50px 15px;
+  }
+
+  .form-control {
+    font-size: 14px;
+  }
+
+  /* GIFT */
+  .gift {
+    padding: 50px 15px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 15px;
+  }
+
+  .footer-nama {
+    font-size: 22px;
+  }
+}
