@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Revita & Jamil Wedding</title>
 
+    <meta property="og:title" content="Revita & Jamil Wedding" />
+<meta property="og:description" content="Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami." />
+<meta property="og:image" content="https://invitationrevitajamil.my.id/img/bg-prewed.jpg" />
+<meta property="og:url" content="https://invitationrevitajamil.my.id/" />
+<meta property="og:type" content="website" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Revita & Jamil Wedding" />
+<meta name="twitter:description" content="Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami." />
+<meta name="twitter:image" content="https://invitationrevitajamil.my.id/img/bg-prewed.jpg" />
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -397,13 +408,24 @@ Designed & Developed by Haidar
         }
       }
 
-      // COPY REKENING
-      function copyRek(id) {
-        const text = document.getElementById(id).innerText;
-        navigator.clipboard.writeText(text);
-        alert("Nomor rekening berhasil disalin!");
-      }
+// COPY REKENING
+function copyRek(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
 
+  showToast("Nomor rekening berhasil disalin!");
+}
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+
+  toast.innerText = message;
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2000);
+}
       // RSVP FORM
       document.getElementById("rsvpForm").addEventListener("submit", function (e) {
         e.preventDefault();
@@ -470,5 +492,6 @@ Designed & Developed by Haidar
       window.addEventListener("scroll", revealOnScroll);
       window.addEventListener("load", revealOnScroll);
     </script>
+    <div id="toast" class="toast-notif">Teks berhasil disalin!</div>
   </body>
 </html>
