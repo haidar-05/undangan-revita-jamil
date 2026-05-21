@@ -11,6 +11,7 @@ body {
   font-family: "Work Sans", sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* SCROLL LOCK */
@@ -164,7 +165,6 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
-/* Ornamen Dekoratif Undangan */
 .ornamen-top {
   position: absolute;
   top: 0;
@@ -210,13 +210,8 @@ body.overflow-hidden {
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
 .undangan h2 {
@@ -251,19 +246,13 @@ body.overflow-hidden {
 }
 
 .foto {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--gold);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 768px) {
-  .foto {
-    width: 100px;
-    height: 100px;
-  }
 }
 
 .pria {
@@ -304,7 +293,6 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
-/* Pattern Overlay untuk Info */
 .pattern-overlay {
   position: absolute;
   top: 0;
@@ -312,7 +300,8 @@ body.overflow-hidden {
   right: 0;
   bottom: 0;
   background-image:
-    linear-gradient(45deg, transparent 48%, rgba(201, 169, 97, 0.03) 49%, rgba(201, 169, 97, 0.03) 51%, transparent 52%), linear-gradient(-45deg, transparent 48%, rgba(201, 169, 97, 0.03) 49%, rgba(201, 169, 97, 0.03) 51%, transparent 52%);
+    linear-gradient(45deg, transparent 48%, rgba(201, 169, 97, 0.03) 49%, rgba(201, 169, 97, 0.03) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(201, 169, 97, 0.03) 49%, rgba(201, 169, 97, 0.03) 51%, transparent 52%);
   background-size: 30px 30px;
   pointer-events: none;
 }
@@ -342,15 +331,8 @@ body.overflow-hidden {
 }
 
 @keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 .info h2 {
@@ -379,7 +361,6 @@ body.overflow-hidden {
   z-index: 1;
 }
 
-/* CARD */
 .card-acara {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
@@ -430,7 +411,6 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
-/* Dekorasi Bunga untuk Story */
 .flower-decor {
   position: absolute;
   width: 150px;
@@ -456,12 +436,8 @@ body.overflow-hidden {
 }
 
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .story::before {
@@ -503,7 +479,6 @@ body.overflow-hidden {
   z-index: 1;
 }
 
-/* TIMELINE */
 .timeline {
   position: relative;
   max-width: 800px;
@@ -548,9 +523,7 @@ body.overflow-hidden {
   background: var(--gold);
   border-radius: 50%;
   top: 20px;
-  box-shadow:
-    0 0 0 4px #fafafa,
-    0 0 0 6px var(--gold);
+  box-shadow: 0 0 0 4px #fafafa, 0 0 0 6px var(--gold);
 }
 
 .timeline-item.right::after {
@@ -597,7 +570,6 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
-/* Ornamen Gallery */
 .gallery-ornament {
   position: absolute;
   top: 0;
@@ -655,6 +627,9 @@ body.overflow-hidden {
 }
 
 .galeri-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
   border-radius: 12px;
   transition: all 0.3s;
   cursor: pointer;
@@ -669,6 +644,53 @@ body.overflow-hidden {
 }
 
 /* ========================= */
+/* QUOTES */
+/* ========================= */
+
+.quotes {
+  background: linear-gradient(to bottom, #f9f9f9, #f1f1f1);
+  padding: 100px 20px 140px;
+  position: relative;
+}
+
+.quotes h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.quote-text {
+  max-width: 750px;
+  margin: auto;
+  font-size: 18px;
+  font-style: italic;
+  color: #555;
+  line-height: 1.9;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+}
+
+.wave svg {
+  display: block;
+  width: 100%;
+  height: 120px;
+}
+
+/* ========================= */
 /* RSVP */
 /* ========================= */
 
@@ -679,7 +701,6 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
-/* Dekorasi RSVP */
 .rsvp-decor {
   position: absolute;
   top: 0;
@@ -763,7 +784,6 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
-/* Pattern Gift */
 .gift-pattern {
   position: absolute;
   top: 0;
@@ -849,11 +869,12 @@ body.overflow-hidden {
 
 .btn-gift {
   background: linear-gradient(135deg, #5a2a1d, #3e1c14);
-  color: white;
+  color: #fff !important;
   padding: 12px 35px;
   border-radius: 30px;
   border: none;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 16px;
   transition: all 0.3s;
   box-shadow: 0 4px 15px rgba(90, 42, 29, 0.3);
   position: relative;
@@ -944,100 +965,14 @@ body.overflow-hidden {
 }
 
 /* ========================= */
-/* RESPONSIVE */
+/* MUSIC BUTTON */
 /* ========================= */
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 3.5rem;
-  }
-
-  .hero h4 {
-    font-size: 1.2rem;
-  }
-
-  .foto {
-    width: 100px;
-    height: 100px;
-  }
-
-  .love {
-    font-size: 1.8rem;
-  }
-
-  .pasangan h3 {
-    font-size: 2rem;
-  }
-
-  .undangan h2,
-  .info h2,
-  .story h2,
-  .gallery h2,
-  .rsvp h2,
-  .gift h2 {
-    font-size: 2.5rem;
-  }
-
-  .timeline::after {
-    left: 20px;
-  }
-
-  .timeline-item {
-    width: 100%;
-    padding-left: 60px;
-    padding-right: 20px;
-    text-align: left;
-  }
-
-  .timeline-item.left,
-  .timeline-item.right {
-    left: 0;
-  }
-
-  .timeline-item::after {
-    left: 11px;
-  }
-
-  .simply-section {
-    width: 75px;
-    height: 75px;
-  }
-
-  .simply-amount {
-    font-size: 1.3rem;
-  }
-
-  .simply-word {
-    font-size: 0.7rem;
-  }
-
-  .footer-nama {
-    font-size: 2.5rem;
-  }
-
-  .flower-left,
-  .flower-right {
-    width: 100px;
-    height: 100px;
-  }
-
-  .undangan::before,
-  .undangan::after,
-  .story::before,
-  .story::after,
-  .gallery::before,
-  .gallery::after,
-  .rsvp::before,
-  .gift::before,
-  .gift::after {
-    font-size: 2rem;
-  }
-}
 .music-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: var(--pink);
+  background: var(--gold);
   color: white;
   border: none;
   border-radius: 50%;
@@ -1047,53 +982,10 @@ body.overflow-hidden {
   cursor: pointer;
   z-index: 999;
 }
+
 /* ========================= */
-/* FIX MOBILE PASANGAN */
+/* REVEAL ANIMATION */
 /* ========================= */
-@media (max-width: 768px) {
-  .pasangan {
-    text-align: center;
-  }
-
-  /* TEKS JADI CENTER */
-  .pasangan .col-md-4 {
-    text-align: center !important;
-    margin-bottom: 20px;
-  }
-
-  /* FOTO JADI KE BAWAH */
-  .pasangan .col-md-4:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  /* FOTO */
-  .foto {
-    width: 110px;
-    height: 110px;
-  }
-
-  /* LOVE */
-  .love {
-    font-size: 1.5rem;
-  }
-
-  /* JARAK ANTAR SECTION */
-  .undangan {
-    padding: 60px 15px;
-  }
-
-  /* NAMA BIAR GA KEPOTONG */
-  .pasangan h3 {
-    font-size: 2rem;
-  }
-}
-
-#hasilLink a {
-  display: inline-block;
-  margin-top: 10px;
-}
 
 .reveal {
   opacity: 0;
@@ -1105,60 +997,69 @@ body.overflow-hidden {
   opacity: 1;
   transform: translateY(0);
 }
-.galeri-img {
-  width: 100%;
-  aspect-ratio: 3/4; /* portrait */
-  object-fit: cover;
-  border-radius: 15px;
-}
-.quotes {
-  background: linear-gradient(to bottom, #f9f9f9, #f1f1f1);
-  padding: 100px 20px 140px;
-  position: relative;
+
+/* ========================= */
+/* MISC */
+/* ========================= */
+
+#hasilLink a {
+  display: inline-block;
+  margin-top: 10px;
 }
 
-.quotes h2 {
-  font-family: "Sacramento", cursive;
-  font-size: 42px;
-  color: #333;
-  margin-bottom: 25px;
+.github-link {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.quote-text {
-  max-width: 750px;
-  margin: auto;
-  font-size: 18px;
+.github-link:hover {
+  color: white;
+}
+
+.salam {
   font-style: italic;
-  color: #555;
-  line-height: 1.9;
+  color: #8c8c8c;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
 }
 
-.quote-author {
-  display: block;
-  margin-top: 20px;
+.toast-notif {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #2f2f2f;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 9999;
+  pointer-events: none;
   font-size: 14px;
-  color: #999;
-  letter-spacing: 1px;
-}
-/* WAVE */
-.wave {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  line-height: 0;
 }
 
-.wave svg {
-  display: block;
-  width: 100%;
-  height: 120px;
+.toast-notif.show {
+  opacity: 1;
+  transform: translateY(0);
 }
-/* ================= GLOBAL MOBILE FIX ================= */
+
+/* ========================= */
+/* RESPONSIVE - SATU BLOK RAPI */
+/* ========================= */
+
 @media (max-width: 768px) {
+
   /* HERO */
   .hero {
     padding: 40px 15px;
     text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
   }
 
   .hero h1.nama {
@@ -1173,24 +1074,152 @@ body.overflow-hidden {
     font-size: 14px;
   }
 
-  /* NAVBAR */
-  .navbar-brand {
-    font-size: 18px;
+  /* NAVBAR - hilangkan hamburger di mobile */
+  .navbar-toggler {
+    display: none !important;
   }
 
-  /* UNDANGAN (PASANGAN) */
+  .navbar-collapse {
+    display: flex !important;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 5px;
+    font-size: 0.8rem;
+  }
+
+  /* PASANGAN - kiri kanan tetap di mobile */
   .pasangan {
     text-align: center;
   }
 
-  .pasangan .col-md-4 {
-    text-align: center !important;
-    margin-bottom: 20px;
+  .pasangan .col-5 {
+    padding: 0 5px;
   }
 
   .foto {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .love {
+    font-size: 1.5rem;
+  }
+
+  .pasangan h3 {
+    font-size: 1.4rem;
+  }
+
+  .pasangan p,
+  .pasangan span {
+    font-size: 0.75rem;
+  }
+  .simply-section {
+    width: 75px;
+    height: 75px;
+  }
+
+  .simply-amount {
+    font-size: 1.3rem;
+  }
+
+  .simply-word {
+    font-size: 0.7rem;
+  }
+
+  /* UNDANGAN */
+  .undangan {
+    padding: 60px 15px;
+  }
+
+  .undangan h2,
+  .info h2,
+  .story h2,
+  .gallery h2,
+  .rsvp h2,
+  .gift h2 {
+    font-size: 2.5rem;
+  }
+
+  .undangan::before,
+  .undangan::after,
+  .story::before,
+  .story::after,
+  .gallery::before,
+  .gallery::after,
+  .rsvp::before,
+  .gift::before,
+  .gift::after {
+    font-size: 2rem;
+  }
+
+  /* NAVBAR - hilangkan hamburger di mobile */
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 5px;
+    font-size: 0.8rem;
+  }
+
+  /* COUNTDOWN */
+  .simply-section {
+    width: 75px;
+    height: 75px;
+  }
+
+  .simply-amount {
+    font-size: 1.3rem;
+  }
+
+  .simply-word {
+    font-size: 0.7rem;
+  }
+
+  /* PASANGAN - kiri kanan tetap di mobile */
+  .pasangan {
+    text-align: center;
+  }
+
+  .pasangan .col-5 {
+    padding: 0 5px;
+  }
+
+  .foto {
+    width: 150px;
+    height: 150px;
+  }
+
+  .love {
+    font-size: 1.5rem;
+  }
+
+  .pasangan h3 {
+    font-size: 1.4rem;
+  }
+
+  .pasangan p,
+  .pasangan span {
+    font-size: 0.75rem;
   }
 
   /* INFO */
@@ -1238,6 +1267,27 @@ body.overflow-hidden {
     border-radius: 10px;
   }
 
+  /* TIMELINE */
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::after {
+    left: 11px;
+  }
+
   /* RSVP */
   .rsvp {
     padding: 50px 15px;
@@ -1260,4 +1310,52 @@ body.overflow-hidden {
   .footer-nama {
     font-size: 22px;
   }
+
+  /* DECORATIONS */
+  .flower-left,
+  .flower-right {
+    width: 100px;
+    height: 100px;
+  }
+}
+/* NAVBAR MOBILE - sembunyiin menu, langsung row */
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  .navbar {
+    overflow: hidden;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 3px;
+    font-size: 0.75rem;
+    padding: 4px 4px;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+}
+
+  .navbar-collapse {
+    display: flex !important;
+    justify-content: flex-end;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    padding: 4px 6px;
+  }
+  body {
+  overflow-x: hidden;
 }
