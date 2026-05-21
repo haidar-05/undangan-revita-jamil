@@ -1319,3 +1319,9 @@ body.overflow-hidden {
     height: 100px;
   }
 }
+.bank-logo {
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
