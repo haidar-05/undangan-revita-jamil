@@ -5,17 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Revita & Jamil Wedding</title>
 
-    <meta property="og:title" content="Revita & Jamil Wedding" />
-<meta property="og:description" content="Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami." />
-<meta property="og:image" content="https://invitationrevitajamil.my.id/img/bg-prewed.jpg" />
-<meta property="og:url" content="https://invitationrevitajamil.my.id/" />
-<meta property="og:type" content="website" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Revita & Jamil Wedding" />
-<meta name="twitter:description" content="Kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami." />
-<meta name="twitter:image" content="https://invitationrevitajamil.my.id/img/bg-prewed.jpg" />
-
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -56,18 +45,10 @@
     <!-- HERO -->
     <section id="hero" class="hero d-flex justify-content-center align-items-center text-center text-white">
       <main>
-<h4 class="reveal">THE WEDDING OF</h4>
-
-<h1 class="nama reveal">Revita & Jamil</h1>
-
-<p class="reveal">
-  Kepada Yth.<br />
-  Bapak/Ibu/Saudara/i
-</p>
-
-<h3 id="namaTamu" class="reveal">
-  Tamu Undangan
-</h3>
+        <h4 class="reveal">Kepada Bapak/Ibu/Saudara/i,</h4>
+        <h3 id="namaTamu" class="reveal">Tamu Undangan</h3>
+        <h1 class="nama reveal">Revita & Jamil</h1>
+        <p class="reveal">Akan melangsungkan resepsi pernikahan dalam:</p>
 
         <div class="simply-countdown reveal"></div>
 
@@ -75,34 +56,24 @@
       </main>
     </section>
 
-<!-- UNDANGAN -->
-<section id="undangan" class="undangan">
-  <!-- Ornamen Dekoratif -->
-  <div class="ornamen-top"></div>
+    <!-- UNDANGAN -->
+    <section id="undangan" class="undangan">
+      <!-- Ornamen Dekoratif -->
+      <div class="ornamen-top"></div>
 
-  <div class="container text-center">
-    <h2 class="reveal">Acara Pernikahan</h2>
+      <div class="container text-center">
+        <h2 class="reveal">Acara Pernikahan</h2>
+        <p class="lead reveal">Diselenggarakan pada 05 Juni 2026 di Tangerang, Banten.</p>
 
-<p class="salam reveal">
-  Assalamu’alaikum Warahmatullaahi Wabarakaatuh
-</p>
+        <p class="desc reveal">Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.</p>
 
-<p class="desc reveal">
-  Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang
-  Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.
-</p>
-
-<p class="lead reveal">
-  Diselenggarakan pada 05 Juni 2026 di Tangerang, Banten.
-</p>
-
-    <div class="row pasangan align-items-center justify-content-center">
-      <!-- KIRI -->
-      <div class="col-md-4 text-end reveal">
-        <h3>Revita</h3>
-        <p>Revita Septiani, S.Pd</p>
-        <span>Putri Pertama dari Bpk. Maryasan & Ibu Komariah</span>
-      </div>
+        <div class="row pasangan align-items-center justify-content-center">
+          <!-- KIRI -->
+          <div class="col-md-4 text-end reveal">
+            <h3>Revita</h3>
+            <p>Revita Septiani, S.Pd</p>
+            <span>Putri Pertama dari Bpk. Maryasan & Ibu Komariah</span>
+          </div>
 
           <!-- TENGAH -->
           <div class="col-md-4 d-flex justify-content-center reveal align-items-center gap-3">
@@ -318,21 +289,10 @@
 
         <h2 class="footer-nama reveal">Revita & Jamil</h2>
 
-<p class="copyright reveal">
-  © 2026 Made With Love by <br />
-
-  <span>M.HaidarSaputra, S.Kom</span>
-
-  <br /><br />
-
-  <a
-    href="https://haidar-05.github.io/portfolio-haidar/"
-    target="_blank"
-    class="github-link"
-  >
-Designed & Developed by Haidar
-  </a>
-</p>
+        <p class="copyright reveal">
+          © 2026 Made With Love by <br />
+          <span>M.HaidarSaputra, S.Kom</span>
+        </p>
       </div>
     </section>
 
@@ -408,24 +368,13 @@ Designed & Developed by Haidar
         }
       }
 
-// COPY REKENING
-function copyRek(id) {
-  const text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text);
+      // COPY REKENING
+      function copyRek(id) {
+        const text = document.getElementById(id).innerText;
+        navigator.clipboard.writeText(text);
+        alert("Nomor rekening berhasil disalin!");
+      }
 
-  showToast("Nomor rekening berhasil disalin!");
-}
-
-function showToast(message) {
-  const toast = document.getElementById("toast");
-
-  toast.innerText = message;
-  toast.classList.add("show");
-
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2000);
-}
       // RSVP FORM
       document.getElementById("rsvpForm").addEventListener("submit", function (e) {
         e.preventDefault();
@@ -492,6 +441,5 @@ function showToast(message) {
       window.addEventListener("scroll", revealOnScroll);
       window.addEventListener("load", revealOnScroll);
     </script>
-    <div id="toast" class="toast-notif">Teks berhasil disalin!</div>
   </body>
 </html>
