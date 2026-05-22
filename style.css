@@ -1100,13 +1100,21 @@ body.overflow-hidden {
     font-size: 0.8rem;
   }
 
-  /* PASANGAN - kiri kanan tetap di mobile */
+  /* PASANGAN - atas bawah di mobile */
   .pasangan {
     text-align: center;
   }
 
   .pasangan .col-5 {
-    padding: 0 5px;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .pasangan .col-2 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 10px;
   }
 
   .foto {
@@ -1126,6 +1134,8 @@ body.overflow-hidden {
   .pasangan span {
     font-size: 0.75rem;
   }
+
+  /* COUNTDOWN */
   .simply-section {
     width: 75px;
     height: 75px;
@@ -1324,4 +1334,9 @@ body.overflow-hidden {
   height: auto;
   object-fit: contain;
   margin-bottom: 10px;
+}
+.alamat-rumah {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
 }

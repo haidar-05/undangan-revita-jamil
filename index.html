@@ -279,40 +279,83 @@
     </section>
 
     <section id="gift" class="gift text-center">
-      <!-- Pattern Gift -->
-      <div class="gift-pattern"></div>
+  <!-- Pattern Gift -->
+  <div class="gift-pattern"></div>
 
-      <div class="container">
-        <h2 class="reveal">Wedding Gift</h2>
-        <p class="desc reveal">Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Jika ingin memberikan hadiah, silakan klik tombol di bawah ini.</p>
+  <div class="container">
+    <h2 class="reveal">Wedding Gift</h2>
 
-        <!-- TOMBOL -->
-        <button onclick="toggleGift()" class="btn btn-gift mt-3 reveal">🎁 Kirim Hadiah</button>
+    <p class="desc reveal">
+      Doa Restu Anda merupakan karunia yang sangat berarti bagi kami.
+      Jika ingin memberikan hadiah, silakan klik tombol di bawah ini.
+    </p>
 
-        <!-- ISI GIFT (HIDDEN DULU) -->
-        <div id="giftContent" class="mt-4 d-none">
-          <div class="row justify-content-center">
-<div class="col-md-4 mb-3">
-  <div class="card-gift reveal">
-    <img src="img/bri.jpg" alt="BRI" class="bank-logo">
-    <p id="rek1" class="mb-1">012001139512500</p>
-    <span>a.n Revita Septiani</span>
-    <button onclick="copyRek('rek1')" class="btn btn-gold btn-sm mt-2">Copy</button>
-  </div>
-</div>
+    <!-- TOMBOL -->
+    <button onclick="toggleGift()" class="btn btn-gift mt-3 reveal">
+      🎁 Kirim Hadiah
+    </button>
 
-<div class="col-md-4 mb-3">
-  <div class="card-gift reveal">
-    <img src="img/bni.jpg" alt="BNI" class="bank-logo">
-    <p id="rek2" class="mb-1">1451974507</p>
-    <span>a.n Jamil Fahmi</span>
-    <button onclick="copyRek('rek2')" class="btn btn-gold btn-sm mt-2">Copy</button>
-  </div>
-</div>
+    <!-- ISI GIFT -->
+    <div id="giftContent" class="mt-4 d-none">
+      <div class="row justify-content-center">
+
+        <!-- BRI -->
+        <div class="col-md-4 mb-3">
+          <div class="card-gift reveal">
+
+            <img src="img/bri.jpg" alt="BRI" class="bank-logo">
+
+            <p id="rek1" class="mb-1">
+              012001139512500
+            </p>
+
+            <span>a.n Revita Septiani</span>
+
+            <button onclick="copyRek('rek1')" class="btn btn-gold btn-sm mt-2">
+              Copy
+            </button>
+
           </div>
         </div>
+
+        <!-- BNI -->
+        <div class="col-md-4 mb-3">
+          <div class="card-gift reveal">
+
+            <img src="img/bni.jpg" alt="BNI" class="bank-logo">
+
+            <p id="rek2" class="mb-1">
+              1451974507
+            </p>
+
+            <span>a.n Jamil Fahmi</span>
+
+            <button onclick="copyRek('rek2')" class="btn btn-gold btn-sm mt-2">
+              Copy
+            </button>
+
+          </div>
+        </div>
+
+        <!-- ALAMAT RUMAH -->
+        <div class="col-md-8 mb-3">
+          <div class="card-gift reveal">
+
+            <h4>Alamat Rumah</h4>
+
+            <p class="alamat-rumah mt-3">
+              Revita & Jamil <br><br>
+
+              Jl.Kp. Pintu Kapuk RT30 RW 14, Desa Bojong Renged, Kecamatan Teluknaga, Kab Tangerang, Banten <br>
+            </p>
+
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <section class="footer">
       <div class="container text-center">
