@@ -22,6 +22,10 @@
         border-radius: 15px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       }
+
+      .btn-primary {
+        width: 100%;
+      }
     </style>
   </head>
 
@@ -55,10 +59,13 @@
         let encoded = encodeURIComponent(nama);
 
         // LINK WEBSITE
-        let link = "https://invitationrevitajamil.my.id/?to=" + encoded;
+        let link =
+          "https://invitationrevitajamil.my.id/?to=" + encoded;
 
         // PESAN WHATSAPP
-        let pesan = `Assalamualaikum Warahmatullahi Wabarakatuh
+        let pesan = `${link}
+
+Assalamualaikum Warahmatullahi Wabarakatuh
 
 Kepada Yth.
 Bapak/Ibu/Saudara/i
